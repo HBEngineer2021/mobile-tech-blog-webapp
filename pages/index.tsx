@@ -27,7 +27,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <meta name="theme-color" content="#27272A" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="container flex flex-wrap text-white font-bold text-lg mx-auto px-10 pt-10">
+      <h1 className="container flex flex-wrap text-black font-bold text-lg mx-auto px-10 pt-10">
         記事一覧
       </h1>
       <div className="flex justify-center">
@@ -36,7 +36,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
             <div className="container flex flex-wrap mx-auto">
               <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
                 {blogs.map(blog => (
-                  <div className="shadow-lg p-3 mb-5 bg-zinc-700 rounded transition ease-in-out delay-150 hover:-translate-y-3 hover:bg-zinc-500 duration-200" key={blog.id}>
+                  <div className="shadow-lg p-3 mb-5 bg-[#0b5394ff] rounded transition ease-in-out delay-150 hover:-translate-y-3 hover:bg-zinc-500 duration-200" key={blog.id}>
                     <span>
                       <Link href={`/article/${blog.id}/`} passHref>
                         <a>

@@ -12,9 +12,11 @@ import "highlight.js/styles/hybrid.css";
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import styles from '../../styles/Home.module.scss';
 import Head from 'next/head';
+import { ProfileArea } from '../../components/ProfileArea';
+import { CategoryArea } from '../../components/CategoryArea';
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const data = await client.get({ endpoint: "blogs", queries: {limit: 100}});
+  const data = await client.get({ endpoint: "blogs", queries: { limit: 100 } });
 
   const paths = data.contents.map((content: Blog) => `/article/${content.id}`);
   return { paths, fallback: false };
@@ -63,40 +65,53 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   highlightedBody,
 }: Props) => {
   return (
-    <div className="bg-black h-screen py-10">
+    <>
       <Head>
         <title>{blog.title} | Mobile Developer Docs</title>
         <meta property="og:image" content={blog.eyecatch.url} />
         <meta property="og:description" content={blog.content} />
       </Head>
-      <div className="rounded-md bg-zinc-700 max-w-screen-md p-10 mx-auto">
-        <div className="flex justify-center">
-          <img
-            className="object-cover w-full h-full"
-            src={blog.eyecatch.url}
-          />
-        </div>
-        <div className="mt-5">
-          <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-white">
-            {blog.title}
-          </div>
-          {blog.category && (
-            <div className="flex items-center justify-start mt-4 mb-4">
-              <div className="text-sm px-2 py-1 font-bold bg-zinc-200 text-black rounded-full">
-                #{blog.category}
+      <div className="flex justify-center">
+        <div className="container flex justify-start">
+          <div className="min-h-screen">
+          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
+            <div className="p-10">
+              <div className="rounded-md bg-[#0b5394ff] p-5 max-w-screen-lg mx-auto">
+                <div className="flex justify-center">
+                  <img
+                    className="object-cover w-full h-full"
+                    src={blog.eyecatch.url}
+                  />
+                </div>
+                <div className="mt-5">
+                  <div className="sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-white">
+                    {blog.title}
+                  </div>
+                  {blog.category && (
+                    <div className="flex items-center justify-start mt-4 mb-4">
+                      <div className="text-sm px-2 py-1 font-bold bg-zinc-200 text-black rounded-full">
+                        #{blog.category}
+                      </div>
+                    </div>
+                  )}
+                  <div className="mt-5 text-white">
+                    <div dangerouslySetInnerHTML={{
+                      __html: highlightedBody
+                    }}
+                      className={styles.post}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          )}
-          <div className="mt-5 text-white">
-            <div dangerouslySetInnerHTML={{
-              __html: highlightedBody
-            }}
-              className={styles.post}
-            />
+            </div>
+          </div>
+          <div className="container inline-block invisible lg:visible xl:visible w-0 lg:w-1/3 xl:w-1/3">
+            <ProfileArea />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

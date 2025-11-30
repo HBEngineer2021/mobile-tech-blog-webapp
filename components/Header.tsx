@@ -1,6 +1,19 @@
 import Link from 'next/link'
 import AppleIcon from '@mui/icons-material/Apple';
 import AdbIcon from '@mui/icons-material/Adb';
+import styled from '@emotion/styled';
+
+const HeaderContainer = styled('nav')({
+    backgroundColor: '#0b5394ff',
+    margin: '0 auto',
+    paddingTop: '30px',
+    paddingBottom: '30px',
+    color: '#f2f2f2',
+    letterSpacing: '0.08rem',
+    display: 'flex',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+});
 
 export default function Header() {
   return (
@@ -13,15 +26,14 @@ export default function Header() {
     //     </Link>
     //   </div>
     // </header>
-    <nav className="flex items-center justify-between flex-wrap bg-zinc-800 p-5">
+    <HeaderContainer>
       <div className="flex items-center flex-shrink-0 text-white">
-
         <Link href={'/'} passHref>
           <a className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-2">
             <span className="transition ease-in-out delay-150 text-white hover:text-zinc-600 duration-30 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-5 2xl:ml-44 ml: text-xl">
               <AppleIcon sx={{ m: 0 }} />
               <AdbIcon sx={{ m: 1 }} />
-              Developer Docs
+              Mobile Tech
             </span>
           </a>
         </Link>
@@ -47,6 +59,6 @@ export default function Header() {
           <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
         </div>
       </div> */}
-    </nav>
+    </HeaderContainer>
   )
 }

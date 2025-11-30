@@ -10,7 +10,7 @@ export function CategoryArea({
 }: Props) {
     return (
         <div className="container mt-10 inline-block">
-            <div className="container mx-auto bg-zinc-700 rounded">
+            <div className="container mx-auto bg-[#0b5394ff] rounded">
                 <div className="container pl-0 lg:pl-6 xl:pl-6 pt-0 lg:pt-6 xl:pt-6 text-[0px] lg:text-2xl xl:text-2xl font-semibold text-white">
                     #Category
                 </div>

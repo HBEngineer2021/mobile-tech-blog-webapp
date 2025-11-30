@@ -8,7 +8,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const FooterContainer = styled('div')({
-    backgroundColor: '#27272A',
+    backgroundColor: '#0b5394ff',
     margin: '0 auto',
     paddingTop: '30px',
     paddingBottom: '30px',
@@ -71,7 +71,7 @@ export const Footer = memo(function footer() {
                     </a>
                 </Grid>
                 <Typography variant='body2' sx={{ textAlign: 'center', fontWeight: '200' }}>
-                    © 2022 - 2023 Mobile Developer Docs
+                    © 2022 - 2025 Mobile Tech Blog
                 </Typography>
             </Grid>
         </FooterContainer>
