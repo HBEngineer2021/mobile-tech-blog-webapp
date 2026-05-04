@@ -30,7 +30,7 @@ export default function Header() {
       <div className="flex items-center flex-shrink-0 text-white">
         <Link href={'/'} passHref>
           <a className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-2">
-            <span className="transition ease-in-out delay-150 text-white hover:text-zinc-600 duration-30 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-5 2xl:ml-44 ml: text-xl">
+            <span className="transition ease-in-out delay-150 text-white hover:text-zinc-600 duration-30 sm:ml-0 md:ml-0 lg:ml-0 xl:ml-0 2xl:ml-0 ml: text-xl">
               <AppleIcon sx={{ m: 0 }} />
               <AdbIcon sx={{ m: 1 }} />
               Mobile Tech

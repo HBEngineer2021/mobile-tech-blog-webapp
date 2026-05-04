@@ -22,7 +22,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   return (
     <>
       <Head>
-        <title>記事一覧 | Mobile Developer Docs</title>
+        <title>記事一覧 | Mobile Tech Blog</title>
         <meta name="description" content="iOS & Android Developer Documentation" />
         <meta name="theme-color" content="#27272A" />
         <link rel="icon" href="/favicon.ico" />
@@ -34,7 +34,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <div className="container flex justify-start">
           <div className="min-h-screen">
             <div className="container flex flex-wrap mx-auto">
-              <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+              <div className="container mx-auto p-5 xs:p-10 sm:p-10 md:p-10 lg:p-10 xl:p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
                 {blogs.map(blog => (
                   <div className="shadow-lg p-3 mb-5 bg-[#0b5394ff] rounded transition ease-in-out delay-150 hover:-translate-y-3 hover:bg-zinc-500 duration-200" key={blog.id}>
                     <span>

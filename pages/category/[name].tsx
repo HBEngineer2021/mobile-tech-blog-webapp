@@ -53,7 +53,7 @@ const CategoryPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
     return (
         <>
             <Head>
-                <title>カテゴリー - {title} | Mobile Developer Docs</title>
+                <title>カテゴリー - {title} | Mobile Tech Blog</title>
                 <meta name="description" content="iOS & Android Developer Documentation" />
                 <meta name="theme-color" content="#27272A" />
                 <link rel="icon" href="/favicon.ico" />
