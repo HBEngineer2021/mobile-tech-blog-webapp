@@ -7,7 +7,7 @@ export function ProfileArea() {
                 </div>
                 <div className="flex justify-center w-0 lg:w-full xl:w-full">
                     <img className="rounded-full w-0 lg:w-2/5 xl:w-2/5 h-0 lg:h-2/5 xl:h-2/5 m-0 lg:m-5 xl:m-5"
-                        src="/profileicon.png"
+                        src="/profileicon.PNG"
                         alt="Sunset in the mountains"
                     />
                 </div>
