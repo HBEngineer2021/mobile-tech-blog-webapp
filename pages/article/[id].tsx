@@ -75,7 +75,7 @@ const Article: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <div className="container flex justify-start">
           <div className="min-h-screen">
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
-            <div className="p-5 xs:p-10 sm:p-10 md:p-10 lg:p-10 xl:p-10">
+            <div className="py-5 xs:p-10 sm:p-10 md:p-10 lg:p-10 xl:p-10">
               <div className="rounded-md bg-[#0b5394ff] p-5 max-w-screen-lg mx-auto">
                 <div className="flex justify-center">
                   <img
